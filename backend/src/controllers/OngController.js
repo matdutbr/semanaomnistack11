@@ -23,5 +23,20 @@ module.exports = {
         });
     
         return response.json({ id });
-   } 
+   },
+   async delete(request, response) {
+    //const { id } = request.params;
+    const id = request.headers.authorization;   
+    
+    //const ongs = await connection('ongs')      
+    //  .select('ong_id')
+    //  .first(); 
+
+     // if (ongs.ong_id !== ong_id) {
+     //     return response.status(401).json({ error: 'Operation not permitted.'})
+     // }  
+      await connection('ongs').where('id', id).delete();   
+
+      return response.status(204).send();
+ },   
 }

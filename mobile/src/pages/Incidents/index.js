@@ -6,7 +6,7 @@ import { View, FlatList, Image, Text, TouchableOpacity } from 'react-native';
 import logoImg from '../../assets/logo.png';
 import styles from './styles';
 import api from '../../services/api';
-import { RotationGestureHandler } from 'react-native-gesture-handler';
+//import { RotationGestureHandler } from 'react-native-gesture-handler';
 
 export default function Incidents() {
     const [incidents, setIcidents] = useState([]);
@@ -92,7 +92,7 @@ export default function Incidents() {
                     </TouchableOpacity>
                 </View>
                )}
-            />           
+            />                       
         </View>  
     );  
 }

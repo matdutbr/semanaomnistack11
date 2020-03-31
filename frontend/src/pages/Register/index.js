@@ -16,7 +16,7 @@ export default function Register() {
    const [uf, setUf] = useState('');
 
    const history = useHistory();
-
+   
    async function handleRegister(e){
      e.preventDefault();
      
@@ -36,9 +36,7 @@ export default function Register() {
 
       } catch (err) {
           alert('Erro no cadastro, tente novamente. ');
-      }
-     
-
+      }  
      
    }
 
